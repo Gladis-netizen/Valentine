@@ -150,3 +150,13 @@ button:hover {
     margin-top: 15px;
     line-height: 1.5;
 }
+
+.page { 
+    display: none; /* Semua halaman sembunyi dulu */
+}
+
+.page.active { 
+    display: block !important; /* Hanya yang active yang muncul */
+    animation: fadeIn 0.6s ease-out; 
+}
+
