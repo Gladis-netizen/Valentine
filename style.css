@@ -1,0 +1,120 @@
+:root {
+    --pink-bg: #ffeef2;
+    --main-red: #ff4d6d;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--pink-bg);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Background Animasi Hati */
+.heart-bg {
+    position: fixed;
+    top: -10%;
+    font-size: 20px;
+    color: var(--main-red);
+    animation: fall linear forwards;
+    z-index: -1;
+    user-select: none;
+}
+
+@keyframes fall {
+    to { transform: translateY(110vh); }
+}
+
+.container {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 85%;
+    max-width: 450px;
+    z-index: 10;
+}
+
+.page { 
+    display: none; 
+}
+
+.page.active { 
+    display: block; 
+    animation: fadeIn 0.6s ease-out; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+h1 { color: var(--main-red); font-size: 24px; }
+.emoji-main { font-size: 60px; margin: 20px 0; }
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.photo-placeholder {
+    background: #f0f0f0;
+    aspect-ratio: 1;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #888;
+    border: 2px dashed #ddd;
+}
+
+button {
+    background: var(--main-red);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+}
+
+.letter {
+    text-align: left;
+    line-height: 1.6;
+    color: #444;
+    font-style: italic;
+    background: #fffafa;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid var(--main-red);
+}
+
+/* Biar foto pas di dalam kotak dan gak mencong */
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ini penting biar foto gak gepeng */
+    border-radius: 10px; /* Biar ujung fotonya melengkung rapi */
+}
+
+/* Menghilangkan garis putus-putus kalau sudah ada fotonya */
+.photo-placeholder {
+    border: none; 
+    background: none;
+}
