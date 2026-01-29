@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine Pookie!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="page active" id="p1">
+            <h1>Happy Valentine's Day! ❤️</h1>
+            <div class="emoji-main">🐱</div>
+            <p>Click the next button!! (づ｡◕‿‿◕｡)づ</p>
+            <button onclick="nextPage(2)">Next!! ^w^</button>
+        </div>
+
+        <div class="page" id="p2">
+            <h1>Our Memories :3 🧸</h1>
+            <div class="photo-grid">
+                <div class="photo-placeholder"><img src="Foto1.jpeg" alt="Memory 1"></div>
+                <div class="photo-placeholder"><img src="Foto2.jpeg" alt="Memory 2"></div>
+                <div class="photo-placeholder"><img src="Foto3.jpeg" alt="Memory 3"></div>
+                <div class="photo-placeholder"><img src="Foto4.jpeg" alt="Memory 4"></div>
+                <div class="photo-placeholder"><img src="Foto5.jpeg" alt="Memory 5"></div>
+                <div class="photo-placeholder"><img src="Foto6.jpeg" alt="Memory 6"></div>
+            </div>
+            <button onclick="nextPage(3)">Next →</button>
+        </div>
+
+        <div class="page" id="p3">
+            <h1>💌 For You...</h1>
+            <div class="letter">
+                "Happy Valentine's Day Pookie! <br><br>
+                Terima kasih ya udah bareng terus. Maaf kalau aku sering nyebelin, tapi kamu harus tahu kalau kamu itu favoritnya aku selamanya. <br><br>
+                I love you more than words can say!"
+            </div>
+            <button onclick="finish()">Finish ❤️</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
